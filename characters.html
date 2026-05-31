@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Characters - Seaside Stories</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Main beige paper container. Everything visible on the page lives inside this frame. -->
+  <div class="site-frame">
+    <!-- Shared site header: logo/art, desktop menu, and mobile hamburger menu. -->
+    <header class="site-header">
+  <div class="brand-block">
+    <a class="logo" href="index.html">Seaside<span>STORIES</span></a>
+    <img class="brand-art" src="assets/visuals/lighthouse.svg" alt="">
+  </div>
+
+  <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="top-nav">
+    <span>Menu</span>
+    <i aria-hidden="true"></i>
+  </button>
+
+  <nav id="top-nav" class="top-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="characters.html" class="active">Characters</a>
+    <a href="about.html">About</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+    <main class="page-shell characters-page">
+      <section class="hero-card characters-hero">
+        <span class="card-kicker">Cast List</span>
+        <h1>Characters</h1>
+        <p>Use this page for character profiles, relationship notes, and little seaside-town details. Replace the portrait files in <code>assets/visuals/characters/</code> whenever you have finished art.</p>
+      </section>
+
+      <section class="character-grid" aria-label="Character profiles">
+        <article class="character-card">
+          <img src="assets/visuals/characters/character-01.svg" alt="Character portrait placeholder">
+          <div>
+            <span class="card-kicker">Main Cast</span>
+            <h2>Character Name</h2>
+            <p>A short description goes here. Add personality, role in the story, and what they are usually doing around town.</p>
+            <ul>
+              <li><strong>Likes:</strong> sunset walks, warm tea, old letters</li>
+              <li><strong>First appears:</strong> Chapter 1</li>
+            </ul>
+          </div>
+        </article>
+        <article class="character-card">
+          <img src="assets/visuals/characters/character-02.svg" alt="Character portrait placeholder">
+          <div>
+            <span class="card-kicker">Main Cast</span>
+            <h2>Character Name</h2>
+            <p>Use this card for another character. The CSS will keep the profile feeling like a taped-in sketchbook entry.</p>
+            <ul>
+              <li><strong>Likes:</strong> sea glass, music, late afternoons</li>
+              <li><strong>First appears:</strong> Chapter 1</li>
+            </ul>
+          </div>
+        </article>
+        <article class="character-card">
+          <img src="assets/visuals/characters/character-03.svg" alt="Character portrait placeholder">
+          <div>
+            <span class="card-kicker">Town</span>
+            <h2>Character Name</h2>
+            <p>Duplicate this card to add more people. You can also add links to chapters, playlists, or extra art.</p>
+            <ul>
+              <li><strong>Likes:</strong> postcards, pastries, lighthouse stories</li>
+              <li><strong>First appears:</strong> Chapter 2</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 88" role="img" aria-label="Episode sketch icon">
+  <rect width="100" height="88" rx="5" fill="#f8edcf"/>
+  <filter id="paperNoise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .12"/></feComponentTransfer></filter>
+  <rect width="100" height="88" rx="5" filter="url(#paperNoise)" opacity=".75"/>
+  <rect x="4" y="4" width="92" height="80" rx="4" fill="none" stroke="#d3b177" stroke-width="2" opacity=".7"/>
+  <path d="M18 68 c6 -25 19 -36 37 -34 c18 2 30 15 34 34 M29 55 h50 M31 43 h46 M45 26 l5 -12 l5 12 M54 14 h14 M23 71 q32 8 66 0" fill="none" stroke="#71513a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".88"/>
+  <path d="M12 16 C29 10 54 12 87 9 M9 79 C30 84 56 80 91 82" fill="none" stroke="#c77639" stroke-width="1.5" opacity=".35" stroke-linecap="round"/>
+</svg>

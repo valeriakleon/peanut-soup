@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Read - Seaside Stories</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Main beige paper container. Everything visible on the page lives inside this frame. -->
+  <div class="site-frame">
+    <!-- Shared site header: logo/art, desktop menu, and mobile hamburger menu. -->
+    <header class="site-header">
+  <div class="brand-block">
+    <a class="logo" href="index.html">Seaside<span>STORIES</span></a>
+    <img class="brand-art" src="assets/visuals/lighthouse.svg" alt="">
+  </div>
+
+  <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="top-nav">
+    <span>Menu</span>
+    <i aria-hidden="true"></i>
+  </button>
+
+  <nav id="top-nav" class="top-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="archive.html" class="active">Archive</a>
+    <a href="characters.html">Characters</a>
+    <a href="about.html">About</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+    <main class="reader-layout">
+      <aside class="paper-panel left-sidebar" aria-label="Chapter pages">
+        <span id="chapter-kicker" class="chapter-kicker"></span>
+        <h1><span id="chapter-name"></span> <img class="tiny-star" src="assets/visuals/starfish.svg" alt=""></h1>
+        <a class="back-link" href="archive.html">← Back to Archive</a>
+        <!-- Episode links are generated from assets/js/comic-data.js.
+             The small images come from each page's `icon` field, not `image`. -->
+        <div id="episode-list" class="episode-list"></div>
+        <img class="sidebar-note" src="assets/visuals/sailboat-note.svg" alt="New pages every Friday note">
+        <div class="social-icons" aria-label="Social links"><span>t</span><span>◎</span><span>f</span><span>✉</span></div>
+      </aside>
+
+      <section class="comic-card">
+        <div class="comic-topbar">
+          <h2 id="comic-title">Loading...</h2>
+          <div class="reading-mode">
+            <span>Reading Mode:</span>
+            <div class="segmented" role="group" aria-label="Reading mode">
+              <button type="button" data-mode="page">Pages</button>
+              <button type="button" data-mode="scroll">Scroll</button>
+            </div>
+          </div>
+        </div>
+        <!-- Comic pages are inserted here by assets/js/reader.js. -->
+        <section id="comic-reader" class="comic-reader"></section>
+        <nav class="reader-footer" aria-label="Comic navigation">
+          <div class="primary-nav-row">
+            <a id="prev-link-bottom">← Prev Page</a>
+            <span id="page-count">01 / 07</span>
+            <a id="next-link-bottom">Next Page →</a>
+          </div>
+          <div class="secondary-nav-row">
+            <a id="first-link-bottom">⇤ First</a>
+            <a id="latest-link-bottom">Latest ⇥</a>
+            <a href="archive.html">▤ Archive</a>
+          </div>
+        </nav>
+      </section>
+
+      <aside class="right-sidebar" aria-label="Reader extras">
+        <section class="note-card">
+          <img class="tape" src="assets/visuals/paper-tape.svg" alt="">
+          <p class="note-quote">The sea remembers everything.<br>So do we.</p>
+          <img class="postcard" src="assets/visuals/postcard.svg" alt="Editable postcard illustration">
+        </section>
+        <section class="comments-card">
+          <h3>Comments</h3>
+          <!-- Giscus can replace this placeholder later. -->
+          <div class="comment-placeholder">
+            <p>Join the conversation! This area is ready for Giscus when you set it up.</p>
+            <p>Paste your Giscus script here later, or leave this as a styled placeholder.</p>
+          </div>
+          <a class="login-button" href="#">Log in to comment</a>
+        </section>
+      </aside>
+    </main>
+  </div>
+  <script src="assets/js/comic-data.js"></script>
+  <script src="assets/js/reader.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1300" viewBox="0 0 900 1300">
+  <rect width="900" height="1300" fill="#f7eefc"/>
+  <rect x="45" y="45" width="810" height="1210" rx="24" fill="#ffffff" stroke="#211b26" stroke-width="8"/>
+  <text x="450" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#211b26">Comic Page 3</text>
+  <rect x="110" y="230" width="680" height="330" rx="16" fill="#e8a7ff" stroke="#211b26" stroke-width="6"/>
+  <rect x="110" y="620" width="315" height="420" rx="16" fill="#ffd6a5" stroke="#211b26" stroke-width="6"/>
+  <rect x="475" y="620" width="315" height="420" rx="16" fill="#d8f3dc" stroke="#211b26" stroke-width="6"/>
+  <text x="450" y="1140" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#211b26">Replace this SVG with your real comic art.</text>
+</svg>
