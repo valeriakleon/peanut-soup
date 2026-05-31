@@ -13,8 +13,10 @@
 */
 
 @font-face {
-  font-family: '42______';
+  font-family: 'LogoFont';
   src: url('../fonts/42______.ttf') format('truetype');
+    font-weight: normal;
+     font-style: normal;
 }
 
 /* home page */
@@ -178,7 +180,7 @@ button { font: inherit; }
 .brand-block { position: relative; min-height: 150px; padding: 10px 0 0 26px; }
 .logo {
   display: inline-block;
-  font-family: '42______','Brush Script MT', 'Segoe Script', cursive;
+  font-family: 'LogoFont','Brush Script MT', 'Segoe Script', cursive;
   font-size: clamp(2.4rem, 4vw, 4.15rem);
   line-height: .82;
   color: #c66d32;
@@ -189,7 +191,7 @@ button { font: inherit; }
     display: block;
     font-size: clamp(2.4rem, 4vw, 4.15rem);
     line-height: 1.2;
-    font-family: '42______','Brush Script MT', 'Segoe Script', cursive;
+    font-family: 'LogoFont','Brush Script MT', 'Segoe Script', cursive;
     margin-left: 125px;
     color: #c66d32;}
 
