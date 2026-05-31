@@ -4,15 +4,15 @@
   You normally do not need to edit this file.
   Edit assets/js/comic-data.js to change books, chapters, pages, and images.
 
-  WHAT THIS VERSION DOES:
-  - Shows the outer Book 1 / Book 2 section labels above each book area.
-  - Does NOT show the inner chapter-card kicker for Book 1/Book 2 unless you add one.
-  - Does NOT show archive icons. Icons are only for the comic reader sidebar.
+  IMPORTANT:
+  The archive intentionally does NOT show episode icons.
+  Icons are only used in the comic reader sidebar by assets/js/reader.js.
 
-  In comic-data.js:
-  - book.title controls the large outside book title.
-  - chapter.shortTitle/title controls the title inside each chapter card.
-  - chapter.kicker is optional. Leave it empty to hide the small label inside the card.
+  This script reads window.COMIC_DATA and turns it into:
+    Book 1 section
+      - clean page links for the short story
+    Book 2 section
+      - clean chapter cards and page links
 */
 
 const archive = document.getElementById("archive-list");
@@ -32,16 +32,9 @@ function renderChapterCard(book, chapter) {
   const card = document.createElement("section");
   card.className = "archive-card";
 
-  const kickerMarkup = chapter.kicker
-    ? `<span class="card-kicker">${chapter.kicker}</span>`
-    : "";
-
-  const titleText = chapter.shortTitle || chapter.title || "";
-  const titleMarkup = titleText ? `<h2>${titleText}</h2>` : "";
-
   card.innerHTML = `
-    ${kickerMarkup}
-    ${titleMarkup}
+    <span class="card-kicker">${chapter.kicker || `Book ${book.book} · Chapter ${chapter.chapter}`}</span>
+    <h2>${chapter.shortTitle || chapter.title}</h2>
     ${chapter.description ? `<p>${chapter.description}</p>` : ""}
 
     <div class="archive-pages">
@@ -56,13 +49,10 @@ if (archive && window.COMIC_DATA) {
     const bookSection = document.createElement("section");
     bookSection.className = "archive-book";
 
-    const bookTitle = book.title || `Book ${book.book}`;
-
-    // This is the OUTSIDE book heading. This is where Book 1 / Book 2 appears.
     bookSection.innerHTML = `
       <div class="archive-book-heading">
         <span class="card-kicker">Book ${book.book}</span>
-        <h2>${bookTitle}</h2>
+        <h2>${book.title}</h2>
         ${book.description ? `<p>${book.description}</p>` : ""}
       </div>`;
 

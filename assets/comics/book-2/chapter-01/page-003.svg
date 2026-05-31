@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1300">
+  <rect width="900" height="1300" fill="#f8ead2"/>
+  <rect x="55" y="55" width="790" height="1190" rx="28" fill="#fff8e8" stroke="#b88458" stroke-width="5"/>
+  <path d="M90 230 C260 160 355 280 520 220 S760 180 820 260" fill="none" stroke="#bc7d58" stroke-width="14" stroke-linecap="round" opacity=".55"/>
+  <circle cx="710" cy="185" r="58" fill="#f0b46c" opacity=".75"/>
+  <path d="M95 930 C220 850 340 980 470 900 S700 820 815 920" fill="none" stroke="#6f9aa0" stroke-width="11" stroke-linecap="round" opacity=".45"/>
+  <text x="450" y="610" text-anchor="middle" font-family="Georgia, serif" font-size="62" fill="#7c4a2e">Book 2 · Ch 1</text>
+  <text x="450" y="685" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#9a6a47">Page 003</text>
+  <text x="450" y="1180" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#b08361">Replace this file with your comic page</text>
+</svg>

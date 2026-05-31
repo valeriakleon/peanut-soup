@@ -1,5 +1,5 @@
 /*
-  SEASIDE STORIES STYLE SHEET
+  STYLE SHEET
   ----------------------------
   Edit the colors in :root first. Most of the warm paper/seaside look comes
   from these variables plus the paper texture backgrounds below.
@@ -11,6 +11,93 @@
   - .top-nav: torn-paper top menu
   - .comic-card, .paper-panel, .note-card: paper cards
 */
+
+@font-face {
+  font-family: '42______';
+  src: url('../fonts/42______.ttf') format('truetype');
+}
+
+/* home page */
+
+.home-cover {
+    display: block;
+    width: min(100%, 520px);
+    margin: 24px auto;
+    border: 10px solid #fff4df;
+    border-radius: 18px;
+    box-shadow: 0 18px 35px rgba(96, 55, 28, 0.22);
+}
+
+.intro-panel {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    margin: 0px auto 30px;
+}
+
+.cover-column {
+    flex: 0 0 380px;
+}
+
+.home-cover {
+    width: 100%;
+    display: block;
+
+    border-radius: 18px;
+
+    border: 8px solid #f7ead4;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+}
+
+
+.description-card {
+    flex: 1;
+
+    background: #f8eedc;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    border: 2px solid rgba(139,94,60,.15);
+
+    margin: 30px 0px;
+
+    line-height: 1.5;
+
+    box-shadow:
+        0 8px 18px rgba(80,50,20,.08);
+}
+
+.description-card {
+    position: relative;
+}
+
+
+.description-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -12px;
+    right: 30px;
+
+    width: 80px;
+    height: 24px;
+
+    background: rgba(223,189,134,.7);
+
+    transform: rotate(3deg);
+
+    border-radius: 4px;
+}
+
+
+
+
+
 
 
 :root {
@@ -79,14 +166,8 @@ button { font: inherit; }
   border-radius: 6px 26px 10px 10px;
   box-shadow: 0 24px 70px rgba(75, 39, 18, .16), inset 0 0 0 1px rgba(255,255,255,.55);
 }
-.site-frame::after {
-  content: '';
-  position: absolute;
-  right: 0; top: 0;
-  width: 54px; height: 54px;
-  background: linear-gradient(135deg, transparent 0 49%, rgba(225,191,135,.55) 50%, #fff8e8 51%);
-  border-radius: 0 24px 0 8px;
-}
+
+
 .site-header {
   display: grid;
   grid-template-columns: 270px 1fr;
@@ -97,14 +178,21 @@ button { font: inherit; }
 .brand-block { position: relative; min-height: 150px; padding: 10px 0 0 26px; }
 .logo {
   display: inline-block;
-  font-family: 'Brush Script MT', 'Segoe Script', cursive;
+  font-family: '42______','Brush Script MT', 'Segoe Script', cursive;
   font-size: clamp(2.4rem, 4vw, 4.15rem);
   line-height: .82;
   color: #c66d32;
-  transform: rotate(-4deg);
+  /* transform: rotate(-4deg); */
   text-shadow: 0 1px 0 rgba(255,255,255,.8);
 }
-.logo span { display: block; font: 800 .72rem/1.2 system-ui, sans-serif; letter-spacing: .54em; margin-left: 48px; color: #9a5732; transform: rotate(4deg); }
+.logo span {
+    display: block;
+    font-size: clamp(2.4rem, 4vw, 4.15rem);
+    line-height: 1.2;
+    font-family: '42______','Brush Script MT', 'Segoe Script', cursive;
+    margin-left: 125px;
+    color: #c66d32;}
+
 .brand-art { width: 230px; margin-top: -8px; display:block; filter: drop-shadow(0 8px 10px rgba(99,60,28,.16)); }
 /* Desktop top menu. On narrower screens this turns into the hamburger menu. */
 .top-nav {
@@ -250,6 +338,20 @@ button { font: inherit; }
   .top-nav a.active::after, .top-nav a:hover::after { bottom: 8px; left: 35%; right: 35%; }
   .reader-layout{grid-template-columns:1fr} .left-sidebar,.right-sidebar{min-height:auto} .left-sidebar{order:2}.comic-card{order:1}.right-sidebar{order:3}.episode-list{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
 }
+
+@media (max-width: 900px) {
+
+    .intro-panel {
+        flex-direction: column;
+    }
+
+    .cover-column {
+        flex: none;
+        width: 100%;
+    }
+
+}
+
 @media (max-width: 700px) {
   .site-frame{width:100%; margin:0; padding:16px; border-radius:0; border-left:0; border-right:0}
   .comic-topbar{display:grid}.reading-mode{display:block}.segmented{margin-top:8px}.reader-footer{text-align:center} .brand-block{padding-left:0}
